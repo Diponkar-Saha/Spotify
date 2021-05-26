@@ -2,6 +2,7 @@ package com.example.spotify.di
 
 import android.annotation.SuppressLint
 import android.content.Context
+import com.example.spotify.data.remote.MusicDatabase
 import com.google.android.exoplayer2.util.Util
 import com.google.android.exoplayer2.C
 import com.google.android.exoplayer2.SimpleExoPlayer
@@ -17,6 +18,10 @@ import dagger.hilt.android.scopes.ServiceScoped
 @Module
 @InstallIn(ServiceComponent::class)
 object ServiceModule {
+
+    @ServiceScoped
+    @Provides
+    fun provideMusicDatabase()=MusicDatabase()
 
     @SuppressLint("WrongConstant")
     @ServiceScoped
