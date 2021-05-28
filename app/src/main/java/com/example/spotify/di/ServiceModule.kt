@@ -21,7 +21,8 @@ object ServiceModule {
 
     @ServiceScoped
     @Provides
-    fun provideMusicDatabase()=MusicDatabase()
+    fun provideMusicDatabase() = MusicDatabase()
+
 
     @SuppressLint("WrongConstant")
     @ServiceScoped
